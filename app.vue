@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <RacingLeaderboard :data="racingData" />
+    <RacingLeaderboard />
   </NuxtLayout>
 </template>
 
