@@ -21,9 +21,21 @@
       </thead>
 
       <!-- Table body -->
-      <tbody class="table-tbody u-bold"></tbody>
+      <tbody class="table-tbody u-bold">
+        <Racer
+          v-for="(racer, idx) in data"
+          :key="idx"
+          :position="formatPosition(idx + 1)"
+          :car="racer.car"
+          :car-number="racer.carNumber"
+          :driver="racer.driver"
+          :duration="formatDuration(racer.duration)"
+        />
+      </tbody>
     </table>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = defineProps(['data']);
+</script>
