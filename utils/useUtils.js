@@ -36,3 +36,16 @@ export function formatDuration(duration) {
 
   return `${dd(hours)} : ${dd(minutes)} : ${dd(seconds)}`;
 }
+
+// function to format race position
+export function formatPosition(position) {
+  if (position === 1) {
+    return `${position}st`;
+  } else if (position === 2) {
+    return `${position}nd`;
+  } else if (position === 3) {
+    return `${position}rd`;
+  } else {
+    return `${position}th`;
+  }
+}
