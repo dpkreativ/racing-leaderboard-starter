@@ -23,3 +23,16 @@ export function updateState(state, newValue) {
   // sort data
   sortData(state);
 }
+
+// function to format race duration
+export function formatDuration(duration) {
+  let hours = Math.floor(duration / 3600);
+  let minutes = Math.floor((duration - hours * 3600) / 60);
+  let seconds = Math.floor(duration - hours * 3600 - minutes * 60);
+
+  const dd = (x) => {
+    return x.toString().length === 1 ? `0${x}` : x;
+  };
+
+  return `${dd(hours)} : ${dd(minutes)} : ${dd(seconds)}`;
+}
